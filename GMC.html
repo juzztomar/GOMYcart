@@ -1,0 +1,267 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./GMC.css">
+</head>
+<body>
+<navbar id="navbar">
+<div id="logo-div"><a href=""><h2 id="logo">GOMY</h2> <h2 id="logo2">Cart</h2></a> </div>
+
+<div id="links-div">
+<button id="login-btn" onclick=about()>About</button>
+<button id="login-btn" onclick=contact()>Countact us</button>
+<button id="login-btn" onclick=login()>Login</button>
+<button id="wish-btn" onclick=wishlist()><img src="./images/wishlist (1).png" alt="" id="wishlist-btn"><p>wishlist</p></button>
+<button id="cart-btn"><img src="./images/add-to-basket.png" alt="" id="cart-btn"><p>cart</p></button>
+</div>
+<div class="search">
+    <input type="text" placeholder="search...">
+    <input type="submit" value="Search" >
+  </div>
+    </navbar>
+        <div id="form-bef">
+            <form>
+                <div>
+                  <label for="name" id="name">Name:</label>
+                  <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                  <label for="email">Email:</label>
+                  <input type="email" id="emal" name="email" required >
+                </div>
+                <div>
+                  <label for="password">Password:</label>
+                  <input type="password" id="password" name="password" required>
+                </div>
+                <div>
+                  <button id="submit-btn">Submit</button>
+                </div>
+              </form>
+              
+          </div>
+<section id="hero">
+    <img src="./images/39eff1195b8098bd8a284ff8752d9f9f.jpg" alt="img">
+    <div id="text-group">
+<h4 id="hero-text">#1 online shop in this room</h4>
+<h2 id="hero-text">Super value deals</h2>
+<h1 id="hero-text">On all porducts</h1>
+<p id="hero-text">What are ya waitin for?!</p>
+</div>
+
+<button id="shop-btn" onclick=begin()>Begin shopping</button>
+</section>
+
+<div id="sec2">
+
+<div id="top2">
+
+<div id="prod1-div">
+   <button id="img1-btn"><img src="./images/881d8637301dd43430bd834b8eb78fc5.jpg" alt=""></button>
+
+   <div id="buttons-div">
+    <button id="add2cart-btn1" onclick=remove1()>Add to cart</button>
+    <button id="wishlist-btn1" onclick=heart1()><img src="./images/favorite.png" alt="" id="empty1">
+   <img src="./images/love.png" alt="" id="love1" class="invisible"></button>
+   </div>
+
+</div>
+
+<div id="prod2-div">
+<button id="img2-btn"><img src="./images/ce3789c8d5430cd65df7b6b2635039a8.jpg" alt=""></button>
+
+   <div id="buttons-div">
+    <button id="add2cart-btn2" onclick=remove2()>Add to cart</button>
+    <button id="wishlist-btn2" onclick=heart2()><img src="./images/favorite.png" alt="" id="empty2">
+    <img src="./images/love.png" alt="" id="love2" class="invisible"></button>
+   </div>
+
+</div>
+</div>
+
+<div id="bottom2">
+    <div id="prod3-div">
+
+        <button id="img3-btn"><img src="./images/OIG-removebg-preview.png" alt="" style="background-color: white;"></button>
+        
+       <div id="buttons-div">
+        <button id="add2cart-btn3" onclick=remove3()>Add to cart</button>
+        <button id="wishlist-btn3" onclick=heart3()><img src="./images/favorite.png" alt="" id="empty3">
+        <img src="./images/love.png" alt="" id="love3" class="invisible"></button>
+       </div>
+
+    </div>
+     
+    <div id="prod4-div">
+
+        <button id="img4-btn"><img src="./images/34e3890316c3a1a6eff1f86191fe08f9-removebg-preview.png" alt="" style="background-color: white;"></button>
+     
+       <div id="buttons-div">  
+        <button id="add2cart-btn4" onclick=remove4()>Add to cart</button>
+        <button id="wishlist-btn4" onclick=heart4()><img src="./images/favorite.png" alt="" id="empty4">
+        <img src="./images/love.png" alt="" id="love4" class="invisible"></button>
+       </div>
+
+    </div>
+</div>
+
+</div>
+
+
+
+<div id="about-section">
+<h1>About Us</h1> <br> <br>
+
+<h4>GOMY cart is an online shopping website that offers a wide range of products at affordable prices.
+     Whether you are looking for clothing, electronics, books, or anything else, you can find it on GOMY cart.
+      GOMY cart was founded in 2023 by a group of passionate entrepreneurs who wanted to create a convenient and reliable platform for online shoppers.
+      GOMY cart aims to provide the best customer service, fast delivery, and secure payment options.
+       GOMY cart is more than just a website, it is a community of buyers and sellers who share their feedback and reviews.
+     Join GOMY cart today and discover the joy of online shopping!</h4>
+</div>
+
+<div class="cart-div" id="invisibleC">
+
+
+<div id="items">
+<div id="invisible1" class="cart-product1">
+<div id="product1-img"><img src="./images/881d8637301dd43430bd834b8eb78fc5.jpg" alt="" id="lol1"></div>
+<div id="prod1-text">
+<h2>Description: </h2>
+<p> Black colored shirt with short sleeves <br> made from high quality colth</p>
+
+<div id="prod1-price">
+<h2>price per piece:</h2> <h3>25$</h3>
+</div>
+</div>
+
+<div class="quantity-counter">
+  <input id="quantity-input" type="number" value="0" min="0">
+  <button id="plus-button">+</button>
+  <button id="minus-button">-</button>
+</div>
+<button id="x1" onclick="add1()"><img src="./images/close.png" alt=""></button>
+
+</div>
+
+<div id="invisible2" class="cart-product2">
+  <div id="product2-img"><img src="./images/ce3789c8d5430cd65df7b6b2635039a8.jpg" alt="" id="lol2"></div>
+  <div id="prod2-text">
+  <h2>Description: </h2>
+  <p> white classy jacket <br> from Calvin Klein</p>
+  
+  <div id="prod2-price">
+  <h2>price per piece:</h2> <h3>50$</h3>
+  </div>
+  </div>
+  
+  <div class="quantity-counter">
+    <input id="quantity-input2" type="number" value="0" min="0">
+    <button id="plus-button2">+</button>
+    <button id="minus-button2">-</button>
+  </div>
+  <button id="x2" onclick=add2()><img src="./images/close.png" alt=""></button>
+  </div>
+
+  <div id="invisible3" class="cart-product3">
+    <div id="product3-img"><img src="./images/OIG-removebg-preview.png" alt="" id="lol3"></div>
+    <div id="prod3-text">
+      <h2>Description: </h2>
+      <p> black colored NIKE shoe<br> From the Air force Line </p>
+    
+    <div id="prod3-price">
+    <h2>price per piece:</h2> <h3>100$</h3>
+    </div>
+    </div>
+    
+    <div class="quantity-counter">
+      <input id="quantity-input3" type="number" value="0" min="0">
+      <button id="plus-button3">+</button>
+      <button id="minus-button3">-</button>
+    </div>
+    <button id="x3" onclick=add3()><img src="./images/close.png" alt=""></button>
+    </div>
+  
+    <div id="invisible4" class="cart-product4">
+      <div id="product4-img"><img src="./images/34e3890316c3a1a6eff1f86191fe08f9-removebg-preview.png" alt="" id="lol3"></div>
+      <div id="prod4-text">
+      <h2>Description: </h2>
+      <p> Black colored hoodie <br> made from high quality colth</p>
+      
+      <div id="prod4-price">
+      <h2>price per piece:</h2> <h3>55$</h3>
+      </div>
+      </div>
+      
+      <div class="quantity-counter">
+        <input id="quantity-input4" type="number" value="0" min="0">
+        <button id="plus-button4">+</button>
+        <button id="minus-button4">-</button>
+      </div>
+      <button id="x4" onclick=add4()><img src="./images/close.png" alt=""></button>
+      </div>
+</div>
+
+<div id="buy-div">
+
+<div id="total-div">
+  <h1>Total $ </h1>
+  <h1 id="total-output"> 0</h1>
+</div>
+
+<a href="./GMC.html"><button id="buy-btn">Purchase</button></a>
+
+
+</div>
+
+
+</div>
+
+
+
+<div id="bottom-bar">
+
+    <div id="logo-div2"><h2 id="logo">GOMY</h2> <h2 id="logo2">Cart</h2>
+<section3 id="sec3">   
+
+<div id="contacts">
+   <h2 id="h2c">Our Contacts</h2> <br>
+   <div id="address">
+   <h3 id="h3">Address:</h3>
+   <h4 id="p1">appatment number 26 zaghloul street GIZA</h4>
+</div>
+
+<div id="tel">
+    <h3 id="h3">Tel Num:</h3>
+    <h4 id="p2">123-456-789</h4>
+</div>
+
+<div id="email">
+    <h3 id="h3">Our Email:</h3>
+    <h4 id="p2">Fakemail@gmail.com</h4>
+
+</div>
+</div>
+
+<div id="socials">
+<h2 id="h2s">Our socials</h2> <br>
+
+<div id="facebook">
+<a href="https://www.facebook.com/profile.php?id=100038282196981"><h3 id="h3f">Facebook</h3></a>
+</div>
+
+<div id="instagram">
+    <a href="https://www.instagram.com/omarashraf2606/"><h3 id="h3f">Instagram</h3></a>
+    </div>
+    
+    <div id="pinterest">
+        <a href="https://www.pinterest.com/omarashraf262007/"><h3 id="h3f">Pinterest</h3></a>
+        </div>
+        
+</div>
+
+</section3>
+    <script src="./GMC.js"></script>
+</body>
+</html>
