@@ -22,24 +22,6 @@ var SUform = document.getElementById('form-bef')
 var state='true';
 
 
-function login()
-{
-    if (state=="true") {
-         console.log(SUform);
-    SUform.removeAttribute('id');
-    SUform.setAttribute('id','form-aft') ;
-    state = "false";  
-    console.log(state); 
-    }
-    
- else if (state=="false") {
-    SUform.removeAttribute('id');
-    SUform.setAttribute('id','form-bef') ;
-    state = "true";   
-console.log(state);
-
-}
-}
 
 var add_div = document.getElementById('prod1');
 var btn = document.getElementById('btn-bef');
@@ -49,6 +31,10 @@ var btn = document.getElementById('btn-bef');
 var Heart1 = document.getElementById('empty1')
 var love1 = document.getElementById('love1')
 var status1 = "true"
+var statusW1 = "true"
+var statusW2 = "true"
+var statusW3 = "true"
+var statusW4 = "true"
 function heart1() 
 {
     if (status1 == "true") 
@@ -56,14 +42,15 @@ function heart1()
     Heart1.setAttribute('class','invisible')    
     console.log('function working');
     love1.removeAttribute('class','invisible')
-    status1= "false"
+    status1= "false";
+    statusW1 = "false";
 }
 else
 {
     Heart1.removeAttribute('class','invisible')
     console.log('function working');
     love1.setAttribute('class','invisible')
-    status1= "true"
+    status1= "true";
 }
 }
 
@@ -78,6 +65,7 @@ function heart2()
     console.log('function working');
     love2.removeAttribute('class','invisible')
     status2= "false"
+    statusW2 = "false";
 }
 else
 {
@@ -99,6 +87,7 @@ function heart3()
     console.log('function working');
     love3.removeAttribute('class','invisible')
     status3= "false"
+    statusW3 = "false";
 }
 else
 {
@@ -121,6 +110,7 @@ function heart4()
     console.log('function working');
     love4.removeAttribute('class','invisible')
     status4= "false"
+    statusW4 = "false";
 }
 else
 {
@@ -441,3 +431,141 @@ console.log(stateC);
 }
 
 }
+
+
+var wishdiv = document.getElementById('invisW');
+
+var wishbtn = document.getElementById('wish-btn')
+
+var stateW ="true";
+function wishlist()
+{
+
+
+if (stateW =="true")
+{
+  wishdiv.removeAttribute('id','invisW');
+  stateW = "false";
+  wishdiv.scrollIntoView({behavior:"smooth"});
+  console.log(stateW);
+}
+  else
+{
+wishdiv.setAttribute('id','invisibleC');
+stateW = "true";
+console.log(stateW);
+}
+
+}
+
+var wishlistbtn1 = document.getElementById('wishlist-btn1')
+
+wishlistbtn1.addEventListener('click',wish1)
+
+var wish_prod1 = document.getElementById('invisW1')
+
+
+function wish1() 
+{
+ console.log(statusW1);
+ if (statusW1 == "false")
+{
+wish_prod1.removeAttribute('id','invisW1');
+  statusW1 = "true";
+} 
+else
+{
+  wish_prod1.setAttribute('id','invisW1')  ;
+statusW1 = "false";
+Heart1.removeAttribute('class','invisible')
+love1.setAttribute('class','invisible')
+}
+}
+
+
+
+
+var wishlistbtn2 = document.getElementById('wishlist-btn2')
+
+wishlistbtn2.addEventListener('click',wish2)
+
+var wish_prod2 = document.getElementById('invisW2')
+
+
+function wish2() 
+{
+ console.log(statusW2);
+ if (statusW2 == "false")
+{
+wish_prod2.removeAttribute('id','invisW2');
+  statusW2 = "true";
+} 
+else
+{
+  wish_prod2.setAttribute('id','invisW2')  ;
+statusW2 = "false";
+Heart2.removeAttribute('class','invisible')
+love2.setAttribute('class','invisible')
+}
+
+}
+var wishlistbtn3 = document.getElementById('wishlist-btn3')
+
+wishlistbtn3.addEventListener('click',wish3)
+
+var wish_prod3 = document.getElementById('invisW3')
+
+
+function wish3() 
+{
+ console.log(statusW3);
+ if (statusW3 == "false")
+{
+wish_prod3.removeAttribute('id','invisW3');
+  statusW3 = "true";
+} 
+else
+{
+  wish_prod3.setAttribute('id','invisW3')  ;
+statusW1 = "false";
+Heart3.removeAttribute('class','invisible')
+love3.setAttribute('class','invisible')
+}
+}
+
+var wishlistbtn4 = document.getElementById('wishlist-btn4')
+
+wishlistbtn4.addEventListener('click',wish4)
+
+var wish_prod4 = document.getElementById('invisW4')
+
+
+function wish4() 
+{
+ console.log(statusW4);
+ if (statusW4 == "false")
+{
+wish_prod4.removeAttribute('id','invisW4');
+  statusW4 = "true";
+} 
+else
+{
+  wish_prod4.setAttribute('id','invisW4')  ;
+statusW4 = "false";
+Heart4.removeAttribute('class','invisible')
+love4.setAttribute('class','invisible')
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
