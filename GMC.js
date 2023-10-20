@@ -557,15 +557,68 @@ love4.setAttribute('class','invisible')
 }
 }
 
+var loginBtn = document.getElementById('login-btn2')
+var loginDiv = document.getElementById('invisibleI');
+var stateI = "true";
+
+function validateForm() {
+
+  var name = document.getElementById("name");
+  var email = document.getElementById("email");
+  var password = document.getElementById("password");
+  var confirm = document.getElementById("confirm");
+
+  if (name.value == "" || name.value.length < 3) {
+    alert("Name must not be empty and must have at least 3 characters");
+    return false;
+  }
+
+  var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+  if (email.value == "" || !emailPattern.test(email.value)) {
+    alert("Email must not be empty and must be a valid email address");
+    return false;
+  }
 
 
+  if (password.value == "" || password.value.length < 8) {
+    alert("Password must not be empty and must have at least 8 characters");
+    return false;
+  }
+
+  if (confirm.value != password.value) {
+    alert("Confirm password must match the password");
+    return false;
+  }
 
 
+  return true;
+}
+
+function preventSubmit(event) {
+  event.preventDefault();
+}
+
+function changeDivId() {
+  var div = document.getElementById("login-div");
+
+  div.id = "invisibleI";
+loginBtn.setAttribute('id','invisibleI')
+alert("logged in successfully")
+}
 
 
-
-
-
-
-
-
+function login()
+{
+  if (stateI == "true")
+  {
+  loginDiv.removeAttribute('id','invisibleI')  
+  loginDiv.setAttribute('id','login-div')  
+  stateI = "false";
+  }
+  else
+  {
+    loginDiv.removeAttribute('id','login-div')
+    loginDiv.setAttribute('id','invisibleI')
+    stateI ="true";
+  }
+}

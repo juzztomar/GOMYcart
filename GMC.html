@@ -12,6 +12,7 @@
 <div id="links-div">
 <button id="login-btn" onclick=about()>About</button>
 <button id="login-btn" onclick=contact()>Countact us</button>
+<button id="login-btn2" onclick=login()>Log In</button>  
 <button id="wish-btn" onclick=wishlist()><img src="./images/wishlist (1).png" alt="" id="wishlist-btn"><p>wishlist</p></button>
 <button id="cart-btn"><img src="./images/add-to-basket.png" alt="" id="cart-btn"><p>cart</p></button>
 </div>
@@ -20,7 +21,23 @@
     <input type="submit" value="Search" >
   </div>
     </navbar>
+    <br><br><br><br>
 
+    <div id="invisibleI">
+      <h1>Signup Form</h1>
+      <form action="/signup" method="post" onsubmit="return validateForm(); preventSubmit(event); changeDivId()">
+      
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br>
+        <label for="confirm">Confirm Password:</label>
+        <input type="password" id="confirm" name="confirm"><br>
+        
+        <input type="submit" value="Signup" onclick="preventSubmit(event); changeDivId()">
+      </div>
 <section id="hero">
 <div>
     <div id="text-group">
