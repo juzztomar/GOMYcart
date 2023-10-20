@@ -216,6 +216,19 @@ z-index: 1000;
 background-color: white;
 }
 
+#login-logo
+{
+  display: flex;
+  flex-direction: row;
+justify-content: center;
+align-items: center;
+}
+#login-logo img
+{
+width: auto;
+height: auto;
+}
+
 #invisibleI
 {
   display: none;
