@@ -13,8 +13,8 @@
 <button id="login-btn" onclick=about()>About</button>
 <button id="login-btn" onclick=contact()>Countact us</button>
 <button id="login-btn2" onclick=login()>Log In</button>  
-<button id="wish-btn" onclick=wishlist()><img src="./images/wishlist (1).png" alt="" id="wishlist-btn"><p>wishlist</p></button>
-<button id="cart-btn"><img src="./images/add-to-basket.png" alt="" id="cart-btn"><p>cart</p></button>
+<button id="wish-btn" onclick=wishlist()><img src="./images/wishlist (2).png" alt="" id="wishlist-btn"><p>wishlist</p></button>
+<button id="cart-btn"><img src="./images/add-to-basket (1).png" alt="" id="cart-btn"><p>cart</p></button>
 </div>
 <div class="search">
     <input type="text" placeholder="search...">
@@ -26,18 +26,17 @@
     <div id="invisibleI">
 
      <div id="login-logo"> <h1>login Form</h1> <img src="./images/google-forms.png" alt="logo"></div>
-      <form action="/signup" method="post" onsubmit="return validateForm(); preventSubmit(event); changeDivId()">
-      
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name"><br>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email"><br>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password"><br>
-        <label for="confirm">Confirm Password:</label>
-        <input type="password" id="confirm" name="confirm"><br>
-        
-        <input type="submit" value="Signup" onclick="preventSubmit(event); changeDivId()">
+     <form id="sign-up-form" onsubmit="return validateForm()">
+     <div id="email-div"><label for="email">Email:</label>
+      <input type="email" id="email" name="email" required></div> 
+    
+      <label for="username">Username:</label>
+      <input type="username" id="username" name="username" required>
+      <br>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required> <br> <br>
+      <input type="submit" value="Submit">
+    </form>    
       </div>
 <section id="hero">
 <div>
@@ -67,8 +66,8 @@
 </div>
    <div id="buttons-div">
     <button id="add2cart-btn1" onclick=remove1()>Add to cart</button>
-    <button id="wishlist-btn1" onclick=heart1()><img src="./images/favorite.png" alt="" id="empty1">
-   <img src="./images/love.png" alt="" id="love1" class="invisible"></button>
+    <button id="wishlist-btn1" onclick=heart1()><img src="./images/heart.png" alt="" id="empty1">
+   <img src="./images/heart (1).png" alt="" id="love1" class="invisible"></button>
    </div>
 
 </div>
@@ -82,8 +81,8 @@
 </div>
    <div id="buttons-div">
     <button id="add2cart-btn2" onclick=remove2()>Add to cart</button>
-    <button id="wishlist-btn2" onclick=heart2()><img src="./images/favorite.png" alt="" id="empty2">
-    <img src="./images/love.png" alt="" id="love2" class="invisible"></button>
+    <button id="wishlist-btn2" onclick=heart2()><img src="./images/heart.png" alt="" id="empty2">
+    <img src="./images/heart (1).png" alt="" id="love2" class="invisible"></button>
    </div>
 
 </div>
@@ -92,7 +91,7 @@
 <div id="bottom2">
     <div id="prod3-div">
 
-        <button id="img3-btn"><img src="./images/OIG-removebg-preview.png" alt="" style="background-color: white;"></button>
+        <button id="img3-btn"><img src="./images/OIG.png" alt="" style="background-color: white;"></button>
         <div id="item-Description3">
   <h2>Description: </h2>
   <p> black colored NIKE shoe<br> From the Air force Line </p>
@@ -100,15 +99,15 @@
 </div>
        <div id="buttons-div">
         <button id="add2cart-btn3" onclick=remove3()>Add to cart</button>
-        <button id="wishlist-btn3" onclick=heart3()><img src="./images/favorite.png" alt="" id="empty3">
-        <img src="./images/love.png" alt="" id="love3" class="invisible"></button>
+        <button id="wishlist-btn3" onclick=heart3()><img src="./images/heart.png" alt="" id="empty3">
+        <img src="./images/heart (1).png" alt="" id="love3" class="invisible"></button>
        </div>
 
     </div>
      
     <div id="prod4-div">
 
-        <button id="img4-btn"><img src="./images/34e3890316c3a1a6eff1f86191fe08f9-removebg-preview.png" alt="" style="background-color: white;"></button>
+        <button id="img4-btn"><img src="./images/34e3890316c3a1a6eff1f86191fe08f9-removebg-preview (1).png" alt="" style="background-color: white;"></button>
 <div id="item-Description4">
        <h2>Description: </h2>
   <p> Black colored hoodie <br> made from high quality colth</p>
@@ -116,8 +115,8 @@
 </div>
        <div id="buttons-div">  
         <button id="add2cart-btn4" onclick=remove4()>Add to cart</button>
-        <button id="wishlist-btn4" onclick=heart4()><img src="./images/favorite.png" alt="" id="empty4">
-        <img src="./images/love.png" alt="" id="love4" class="invisible"></button>
+        <button id="wishlist-btn4" onclick=heart4()><img src="./images/heart.png" alt="" id="empty4">
+        <img src="./images/heart (1).png" alt="" id="love4" class="invisible"></button>
        </div>
 
     </div>
@@ -155,7 +154,7 @@
 
  </div>
 
-<button id="heart-btn1" onclick=wish1()><img src="./images/love.png" alt=""></button>
+<button id="heart-btn1" onclick=wish1()><img src="./images/heart (1).png" alt=""></button>
 <button id="add2cart-btn1" onclick=remove1()>Add to cart</button>
  </div>
 
@@ -175,7 +174,7 @@
   
    </div>
   
-  <button id="heart-btn2" onclick=wish2()><img src="./images/love.png" alt=""></button>
+  <button id="heart-btn2" onclick=wish2()><img src="./images/heart (1).png" alt=""></button>
   <button id="add2cart-btn2" onclick=remove2()>Add to cart</button>
 
 </div>
@@ -185,18 +184,17 @@
     
   <div class="img-div3">
 
-    <button id="prod3-btn"><img src="./images/OIG-removebg-preview.png" alt=""></button> 
+    <button id="prod3-btn"><img src="./images/OIG.png" alt=""></button> 
   
      <div id="wish-desc3">
   
-       <h2>item Description</h2>
-    
-       <p> white classy jacket <br> from Calvin Klein</p>
+      <h2>Item Description: </h2>
+      <p> black colored NIKE shoe<br> From the Air force Line </p>
      </div>
   
    </div>
   
-  <button id="heart-btn3" onclick=wish3()><img src="./images/love.png" alt=""></button>
+  <button id="heart-btn3" onclick=wish3()><img src="./images/heart (1).png" alt=""></button>
   <button id="add2cart-btn3" onclick=remove3()>Add to cart</button>
 
 </div>
@@ -206,18 +204,17 @@
     
   <div class="img-div4">
 
-    <button id="prod4-btn"><img src="./images/34e3890316c3a1a6eff1f86191fe08f9-removebg-preview.png" alt=""></button> 
+    <button id="prod4-btn"><img src="./images/34e3890316c3a1a6eff1f86191fe08f9-removebg-preview (1).png" alt=""></button> 
   
      <div id="wish-desc4">
   
-       <h2>item Description</h2>
-    
-       <p> white classy jacket <br> from Calvin Klein</p>
+<h2>Description: </h2>
+      <p> Black colored hoodie <br> made from high quality colth</p>
      </div>
   
    </div>
   
-  <button id="heart-btn4" onclick=wish4()><img src="./images/love.png" alt=""></button>
+  <button id="heart-btn4" onclick=wish4()><img src="./images/heart (1).png" alt=""></button>
   <button id="add2cart-btn4" onclick=remove4()>Add to cart</button>
 
 </div>
@@ -233,7 +230,7 @@
 <div id="invisible1" class="cart-product1">
 <div id="product1-img"><img src="./images/881d8637301dd43430bd834b8eb78fc5.jpg" alt="" id="lol1"></div>
 <div id="prod1-text">
-<h2>Description: </h2>
+<h2>Item Description: </h2>
 <p> Black colored shirt with short sleeves <br> from Omar CO.</p>
 
 <div id="prod1-price">
@@ -246,7 +243,7 @@
   <button id="plus-button">+</button>
   <button id="minus-button">-</button>
 </div>
-<button id="x1" onclick="add1()"><img src="./images/close.png" alt=""></button>
+<button id="x1" onclick="add1()"><img src="./images/close (1).png" alt=""></button>
 
 </div>
 
@@ -266,11 +263,11 @@
     <button id="plus-button2">+</button>
     <button id="minus-button2">-</button>
   </div>
-  <button id="x2" onclick=add2()><img src="./images/close.png" alt=""></button>
+  <button id="x2" onclick=add2()><img src="./images/close (1).png" alt=""></button>
   </div>
 
   <div id="invisible3" class="cart-product3">
-    <div id="product3-img"><img src="./images/OIG-removebg-preview.png" alt="" id="lol3"></div>
+    <div id="product3-img"><img src="./images/OIG.png" alt="" id="lol3"></div>
     <div id="prod3-text">
       <h2>Description: </h2>
       <p> black colored NIKE shoe<br> From the Air force Line </p>
@@ -285,11 +282,11 @@
       <button id="plus-button3">+</button>
       <button id="minus-button3">-</button>
     </div>
-    <button id="x3" onclick=add3()><img src="./images/close.png" alt=""></button>
+    <button id="x3" onclick=add3()><img src="./images/close (1).png" alt=""></button>
     </div>
   
     <div id="invisible4" class="cart-product4">
-      <div id="product4-img"><img src="./images/34e3890316c3a1a6eff1f86191fe08f9-removebg-preview.png" alt="" id="lol3"></div>
+      <div id="product4-img"><img src="./images/34e3890316c3a1a6eff1f86191fe08f9-removebg-preview (1).png" alt="" id="lol3"></div>
       <div id="prod4-text">
       <h2>Description: </h2>
       <p> Black colored hoodie <br> made from high quality colth</p>
@@ -304,7 +301,7 @@
         <button id="plus-button4">+</button>
         <button id="minus-button4">-</button>
       </div>
-      <button id="x4" onclick=add4()><img src="./images/close.png" alt=""></button>
+      <button id="x4" onclick=add4()><img src="./images/close (1).png" alt=""></button>
       </div>
 </div>
 

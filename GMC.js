@@ -561,50 +561,6 @@ var loginBtn = document.getElementById('login-btn2')
 var loginDiv = document.getElementById('invisibleI');
 var stateI = "true";
 
-function validateForm() {
-
-  var name = document.getElementById("name");
-  var email = document.getElementById("email");
-  var password = document.getElementById("password");
-  var confirm = document.getElementById("confirm");
-
-  if (name.value == "" || name.value.length < 3) {
-    alert("Name must not be empty and must have at least 3 characters");
-    return false;
-  }
-
-  var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-  if (email.value == "" || !emailPattern.test(email.value)) {
-    alert("Email must not be empty and must be a valid email address");
-    return false;
-  }
-
-
-  if (password.value == "" || password.value.length < 8) {
-    alert("Password must not be empty and must have at least 8 characters");
-    return false;
-  }
-
-  if (confirm.value != password.value) {
-    alert("Confirm password must match the password");
-    return false;
-  }
-
-
-  return true;
-}
-
-function preventSubmit(event) {
-  event.preventDefault();
-}
-
-function changeDivId() {
-  var div = document.getElementById("login-div");
-
-  div.id = "invisibleI";
-loginBtn.setAttribute('id','invisibleI')
-alert("logged in successfully")
-}
 
 
 function login()
@@ -621,4 +577,29 @@ function login()
     loginDiv.setAttribute('id','invisibleI')
     stateI ="true";
   }
+}
+function validateForm() {
+  // Get the email and password values from the form
+  var email = document.getElementById("email").value;
+  var password = document.getElementById("password").value;
+  // Check if the email has an @ and a dot
+  var emailRegex = /\S+@\S+\.\S+/;
+  if (!emailRegex.test(email)) {
+    alert("Please enter a valid email address");
+    return false;
+  }
+  // Check if the password has at least 8 characters
+  if (password.length < 8) {
+    alert("Please enter a password with at least 8 characters");
+    return false;
+  }
+  // If everything is valid, hide the login button and call hello2 function
+  loginBtn.style.display = "none";
+  login();
+  alert("Logged in successfully");
+  return false; // Prevent the form from submitting
+}
+
+function hello2() {
+  // Write your code for hello2 function here
 }

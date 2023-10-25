@@ -215,6 +215,11 @@ position: fixed;
 z-index: 1000;
 background-color: white;
 }
+#email-div
+{
+  display: flex;
+  flex-direction: row;
+}
 
 #login-logo
 {
@@ -305,8 +310,8 @@ width: 1000px;
 margin-left: 220px;
 margin-top: 200px;
 padding: 50px;
-background-image: url(./images/th.jpg);
-background-blend-mode: overlay;
+background-image: url(./images/wp3516807.jpg);
+background-blend-mode: soft-light;
 }
 #about-section h1,h4
 {
@@ -358,6 +363,8 @@ margin-left: 360px;
     z-index: 1000;
     background-color: rgb(31, 31, 31);
     margin-top: 300px;
+    background-image: url(./images/wp3516807.jpg);
+background-blend-mode: soft-light;
 }
 #logo-div2
 {
@@ -453,6 +460,11 @@ gap: 20px;
   flex-direction: column;
   padding-top: 100px;
 }
+#sec2 img
+{
+  background-color: white;
+}
+
 #top2
 {
   display: flex;
@@ -1120,7 +1132,7 @@ border: 0;
 #heart-btn2 img
 {
   width: auto;
-  height: auto;
+  height: 100%;
 }
 #heart-btn2:hover
 {
